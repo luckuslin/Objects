@@ -20,40 +20,26 @@ const students = [
 // =================================================================
 // PROBLEM 1 — Reading Object Properties
 // =================================================================
-// You are given this movie object. Write code below to:
-//   1. Print the title
-//   2. Print the director
-//   3. Print true/false: is the runtime over 120 minutes?
-//   4. Add a new property `watched` set to true
-//   5. Print each key-value pair using console.log("Title:", movie.title) style
-
-const movie = {
+/* const movie = {
   title: "Interstellar",
   year: 2014,
   director: "Christopher Nolan",
   rating: "PG-13",
   runtime: 169,
+  watched: true,
 };
-
-// TODO 1: Print the movie title
-// console.log(...)
-
-// TODO 2: Print the director's name
-// console.log(...)
-
-// TODO 3: Print true/false — is runtime over 120?
-// console.log(...)
-
-// TODO 4: Add a `watched` property set to true
-// movie.??? = ???
-
-// TODO 5: Print each key-value pair
-// console.log("Title:", ...)
-// console.log("Year:", ...)
-// console.log("Director:", ...)
-// console.log("Rating:", ...)
-// console.log("Runtime:", ...)
-// console.log("Watched:", ...)
+// You are given this movie object. Write code below to:
+//   1. Print the title
+console.log(movie.title);
+//   2. Print the director
+console.log(movie.director);
+//   3. Print true/false: is the runtime over 120 minutes?
+if (movie.runtime > 120) {
+  console.log("True");
+} else if (movie.runtime < 120) console.log("False");
+//   4. Add a new property `watched` set to true
+//   5. Print each key-value pair using console.log("Title:", movie.title) style
+console.log(Object.entries(movie)); */
 
 // =================================================================
 // PROBLEM 2 — Build Your Own Object
@@ -66,15 +52,21 @@ const movie = {
 //   createStudent("Alex", 11, 3.7)  → { name: "Alex", grade: 11, gpa: 3.7, isHonors: true }
 //   createStudent("Sam",  10, 2.9)  → { name: "Sam",  grade: 10, gpa: 2.9, isHonors: false }
 
-function createStudent(name, grade, gpa) {
-  // TODO: return an object with name, grade, gpa, and isHonors
+/* function createStudent(name, grade, gpa) {
+  -
+
+  return {
+    name: name,
+    grade: grade,
+    gpa: gpa,
+    isHonors: gpa >= 3.5,
+  };
 }
-
 // Test your function — uncomment when ready:
-// console.log("\n--- Problem 2 ---");
-// console.log(createStudent("Alex", 11, 3.7));
-// console.log(createStudent("Sam", 10, 2.9));
-
+console.log("\n--- Problem 2 ---");
+console.log(createStudent("Alex", 11, 3.7));
+console.log(createStudent("Sam", 10, 2.9));
+ */
 // =================================================================
 // PROBLEM 3 — Searching an Array of Objects
 // =================================================================
@@ -85,17 +77,16 @@ function createStudent(name, grade, gpa) {
 // Expected output:
 //   findByName(students, "ChenZee") → { name: "ChenZee", grade: 12, gpa: 3.5, isHonors: false }
 //   findByName(students, "Marcus")  → null
-
+/* 
 function findByName(students, targetName) {
-  // TODO: use .find() to search by name
-  // Hint: .find() returns undefined if nothing matches — convert that to null using || (or) operator
-}
+  return students.find((student) => student.name === targetName) || null;
+} */
 
 // Test your function — uncomment when ready:
-// console.log("\n--- Problem 3 ---");
-// console.log(findByName(students, "ChenZee"));
-// console.log(findByName(students, "Jane"));
-// console.log(findByName(students, "Marcus"));
+/* console.log("\n--- Problem 3 ---");
+console.log(findByName(students, "ChenZee"));
+console.log(findByName(students, "Jane"));
+console.log(findByName(students, "Marcus")); */
 
 // =================================================================
 // PROBLEM 4 — Roster Report
@@ -111,13 +102,18 @@ function findByName(students, targetName) {
 // Try solving without the honors first THEN try the star
 
 function printRoster(students) {
-  // TODO: loop through students with .forEach()
-  // TODO: print each student in the format above
+  students.forEach((student) => {
+    console.log(
+      `[Grade ${student.grade}] ${student.name} — GPA: ${student.gpa}`,
+    );
+  });
 }
+// TODO: loop through students with .forEach()
+// TODO: print each student in the format above
 
 // Test your function — uncomment when ready:
-// console.log("\n--- Problem 4 ---");
-// printRoster(students);
+console.log("\n--- Problem 4 ---");
+printRoster(students);
 
 // =================================================================
 // PROBLEM 5 — Object Inspector
