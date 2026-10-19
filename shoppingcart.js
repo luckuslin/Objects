@@ -169,7 +169,7 @@ function shop() {
       catergory: "Breakfast",
     },
   ];
-  items.forEach((name) => console.log(name));
+  items.forEach((item) => console.log(`${item.name}, ${item.cost}$`));
 }
 
 shop();
