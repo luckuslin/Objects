@@ -181,5 +181,11 @@ function addtocart() {
   price.push(items[0].cost + items[1].cost);
   console.log(cart);
   console.log(price);
+  let discount = "DISCOUNT";
+  if (discount === "DISCOUNT") {
+    console.log(price * 0.7);
+  } else if (discount != "DISCOUNT") {
+    console.log("Invalid Code");
+  }
 }
 addtocart();
