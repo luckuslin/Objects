@@ -174,6 +174,8 @@ function shop() {
 
 const box = document.querySelector(".box");
 box.style.backgroundColor = "Green";
+const body = document.querySelector(".body");
+body.style.backgroundColor = "Red";
 
 shop();
 

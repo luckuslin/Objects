@@ -2,20 +2,25 @@ html, body, *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 10px;
+}
+body{
+    background-color: red;
 }
 div{
     display: inline;
     justify-content: center;
     width:300px;
     height: 300px;
-    margin: 5rem;
+    margin: 6.5rem;
     padding: 3rem;
-    
+    background-color: transparent;
 }
 
 img{
     width: 200px;
     height: 200px;
+    background-color: rgba(255, 0, 0, 0.5);
 }
 .box{
     width: 600px;
@@ -26,4 +31,3 @@ img{
     height: 30px;
 
 }
-
