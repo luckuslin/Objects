@@ -1,3 +1,4 @@
+
 html, body, *{
     margin: 0;
     padding: 0;
@@ -8,26 +9,40 @@ body{
     background-color: red;
 }
 div{
-    display: inline;
-    justify-content: center;
-    width:300px;
-    height: 300px;
-    margin: 6.5rem;
-    padding: 3rem;
-    background-color: transparent;
+    margin: 6rem 12rem;
+    padding: 2rem;
+    width: 500px;
+    height: 500px;
+    justify-content:center;
+    background-color: white;
+    border-radius: 5rem;
+    border-color: yellow;
 }
 
+.Mcdonaldsimg {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
 img{
-    width: 200px;
-    height: 200px;
-    background-color: rgba(255, 0, 0, 0.5);
+    width: 300px;
+    height: 300px;
+    margin: 2rem;
+    padding: 2rem;
 }
-.box{
-    width: 600px;
-    height: 600px;
-}
+
 .btn{
     width:100px;
     height: 30px;
+}
 
+h2 {
+    font-size: 50px;;
+    
+}
+h4{
+    font-size: 30px;
 }

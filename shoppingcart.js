@@ -172,11 +172,6 @@ function shop() {
   items.forEach((item) => console.log(`${item.name}, ${item.cost}$`));
 }
 
-const box = document.querySelector(".box");
-box.style.backgroundColor = "Green";
-const body = document.querySelector(".body");
-body.style.backgroundColor = "Red";
-
 shop();
 
 function addtocart() {
